@@ -230,11 +230,8 @@ body{
 .gallery-me{
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     margin-top: 5rem;
-    display: flexbox;
-    justify-content: space-between;
-    align-items: center;
     padding: 40px;
     padding-top: 3rem;
 }
@@ -244,19 +241,56 @@ body{
     color: #00ffff;
 }
 .gallery-me-content{
-    position: relative;
-    width: 50vw;
-    height: 50vh;
-    display: flex;
+    display: inline-block;
+    width: calc(20% - 10px);
+    height: 300px;
+    margin: 5px;
     border: 1px solid #fff;
+    vertical-align: top;
+}
+.gallery-me-content a{
+    display: block;
+    height: 80%;
+    width: 100%;
 }
 .gallery-me-content a img{
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 .description{
-    padding: 15px;
+    padding: 10px;
     text-align: center;
+    font-size: 14px;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1200px) {
+    .gallery-me-content {
+        width: calc(25% - 10px);
+    }
+}
+
+@media (max-width: 900px) {
+    .gallery-me-content {
+        width: calc(33.33% - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-me-content {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery-me-content {
+        width: calc(100% - 10px);
+    }
 }
 
 
